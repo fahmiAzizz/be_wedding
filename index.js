@@ -8,7 +8,7 @@ app.use(express.json())
 
 const wishRouter = require('./routes/wish.router')
 
-app.use("/api/v1/posts", wishRouter)
+app.use("/", wishRouter)
 
 const PORT = process.env.PORT || 5000
 
