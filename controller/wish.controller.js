@@ -15,9 +15,9 @@ const wishController = {
     },
     create: async (req, res) => {
         try {
-            const { name, message } = req.body
-            const sql = "insert into wish (name, message) values (?, ?)"
-            const [rows, fields] = await pool.query(sql, [name, message])
+            const {id_wish, name, message, created_at } = req.body
+            const sql = "insert into wish (id_wish, name, message , created_at) values (?,?,?,?)"
+            const [rows, fields] = await pool.query(sql, [id_wish, name, message, created_at])
             res.json({
                 data: rows
             })
