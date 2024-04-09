@@ -1,5 +1,6 @@
 const pool = require("../database/index")
 const wishController = {
+    
     getAll: async (req, res) => {
         try {
             const [rows, fields] = await pool.query("select * from wish")

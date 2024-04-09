@@ -3,7 +3,7 @@ const router = express.Router()
 
 const wishController = require("../controller/wish.controller")
 
-router.get("/", wishController.getAll)
+router.get("/v1/wish", wishController.getAll)
 router.post("/", wishController.create)
 
 
