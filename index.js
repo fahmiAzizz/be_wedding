@@ -1,10 +1,11 @@
 const express = require("express")
 const app = express()
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 // Parse JSON bodies (as sent by API clients)
 app.use(bodyParser.json());
-
+app.use(cors())
 
 require('dotenv').config()
 
