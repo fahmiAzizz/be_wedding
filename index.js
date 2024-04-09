@@ -1,8 +1,6 @@
 const express = require("express")
 const app = express()
 const bodyParser = require('body-parser')
-// Parse URL-encoded bodies (as sent by HTML forms)
-app.use(bodyParser.urlencoded({ extended: true }));
 
 // Parse JSON bodies (as sent by API clients)
 app.use(bodyParser.json());
@@ -15,7 +13,7 @@ app.use(express.json())
 
 const wishRouter = require('./routes/wish.router')
 
-app.use("/", wishRouter)
+app.use("/v1/wish", wishRouter)
 
 const PORT = process.env.PORT || 5000
 

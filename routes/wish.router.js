@@ -1,9 +1,9 @@
 const express = require("express")
 const router = express.Router()
 
-const wishController = require("../controller/wish.controller")
+const wishController = require("../controller/wish.controller.js")
 
-router.get("/v1/wish", wishController.getAll)
+router.get("/", wishController.getAll)
 router.post("/", wishController.create)
 
 
